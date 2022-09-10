@@ -1,0 +1,300 @@
+body {
+    font-family: "Lato", sans-serif;
+    /* background-color: #cdd2db; */
+    background-color: #F3F4F6;
+}
+
+.imgWidth {
+    width: 100%;
+}
+
+.priceGrey {
+    color: #1F2937;
+}
+
+.itemGrey {
+    color: #6B7280;
+}
+
+.priceItem {
+    margin-left: 25px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 235px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4B5563;
+    display: block;
+}
+
+
+/* .sidebar a:hover {
+  color: #f1f1f1;
+} */
+
+.main {
+    margin-left: 235px;
+    /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+
+/* Cards CSS Start Here*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Float four columns side by side */
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+}
+
+
+/* Remove extra left and right margins, due to padding */
+
+.row {
+    margin: 0 -5px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Style the counter cards */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* padding: 16px; */
+    /* text-align: center; */
+    background-color: #fff;
+    /* height: auto; */
+}
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Cards CSS End Here*/
+
+
+/* Button CSS Start Here*/
+
+.button {
+    margin-left: 20px;
+    position: relative;
+    background: #F3F4F6;
+    border: none;
+    font-size: 15px;
+    color: #4B5563;
+    padding: 10px;
+    width: 250px;
+    margin-bottom: 15px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.button:hover {
+    background-color: #009F7F;
+    color: white;
+}
+
+
+/* Button CSS End Here*/
+
+
+/* Style the sidenav links and the dropdown button */
+
+.dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* On mouse-over */
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+    color: #f1f1f1;
+}
+
+
+/* Add an active class to the active dropdown button */
+
+.active {
+    /* background-color: green; */
+    /* color: white; */
+    color: #009F7F !important;
+}
+
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
+.dropdown-container {
+    display: none;
+    /* background-color: red; */
+    padding-left: 25px;
+    font-weight: 100 !important;
+}
+
+
+/* Optional: Style the caret down icon */
+
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+
+/* for the table */
+
+#table-div {
+    /* margin-left: 17%; */
+    /* margin-right: 17px; */
+    display: block;
+    border-color: #1F2937;
+    background-color: white;
+    border-radius: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    align-items: left;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 16px;
+    border: 1px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+img {
+    width: 80px;
+}
+
+td {
+    border-style: groove;
+}
+
+.DropdownButton {
+    height: 40px;
+    width: 100px;
+    background-color: rgb(94, 130, 238);
+    border-radius: 3px;
+}
+
+
+/* Pagination*/
+.pagination {
+    float: right;
+    padding: 20px;
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #009F7F;
+    color: red;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.headerButton {
+    background-color: white;
+    height: 90px;
+    border-radius: 5px;
+    /* box-shadow: 0 1px 3px 0rgb(0 0 0/0.1),0 1px 2px -1pxrgb(0 0 0/0.1); */
+
+}
+
