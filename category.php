@@ -146,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <h2 class="mt-5">Add Category Naongezas</h2>
+                            <h2 class="mt-5">Add Category Naongezas Hapas</h2>
                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"method="post"
                                 enctype="multipart/form-data">
                                 <div class="form-group">
