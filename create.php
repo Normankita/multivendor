@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check input errors before inserting in database
     if (empty($name_err) && empty($description_err) && empty($price_err)) {
         // Prepare an insert statement
-        $sql = "INSERT INTO employees (name, description, price, image) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO products (name, description, price, image) VALUES (?, ?, ?, ?)";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
                 // Records created successfully. Redirect to landing page
-                header("location: index.php");
+                header("location: products.php");
                 exit();
             }
             else {
@@ -100,9 +100,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Create Record</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .wrapper {
             width: 600px;
@@ -162,7 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <input class="form-control" type="file" name="uploadfile" value="" />
                         </div>
                         <div class="form-group">
-                            <label>Category</label>
+                            <label>description</label>
                             <textarea name="description"
                                 class="form-control <?php echo (!empty($description_err)) ? 'is-invalid' : ''; ?>"><?php echo $description; ?></textarea>
                             <span class="invalid-feedback">

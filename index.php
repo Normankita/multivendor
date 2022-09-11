@@ -20,7 +20,7 @@
 
     <!-- The table begins here -->
 
-    <div class="main"> <h1>INEX PAGE</h1>
+    <div class="main"> <h1>INDEX PAGE</h1>
 </div>
 
 
