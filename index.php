@@ -17,7 +17,7 @@
 <body>
     <?php include "sidenav.php"; ?>
 
-
+    <h1>I am trying to solve his in a manly way</h1>
     <!-- The table begins here -->
 
     <div class="main"> <h1>INDEX PAGE</h1>
